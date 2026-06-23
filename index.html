@@ -13,6 +13,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -20,265 +21,375 @@
   <!-- Navigation -->
   <nav class="navbar" id="navbar">
     <div class="nav-container">
-      <a href="#home" class="nav-logo">OF<span class="logo-dot">.</span></a>
+      <a href="#about" class="nav-logo">OF<span class="logo-dot">.</span></a>
       <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
         <span></span><span></span><span></span>
       </button>
       <ul class="nav-menu" id="navMenu">
-        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#about"      class="nav-link">About</a></li>
         <li><a href="#experience" class="nav-link">Experience</a></li>
-        <li><a href="#expertise" class="nav-link">Expertise</a></li>
-        <li><a href="#impact" class="nav-link">Impact</a></li>
-        <li><a href="#science" class="nav-link">Research</a></li>
-        <li><a href="#contact" class="nav-link nav-cta">Contact</a></li>
+        <li><a href="#expertise"  class="nav-link">Expertise</a></li>
+        <li><a href="#science"    class="nav-link">Research</a></li>
+        <li><a href="#contact"    class="nav-link nav-cta">Contact</a></li>
       </ul>
     </div>
   </nav>
 
-  <!-- Hero Section -->
-  <section id="home" class="hero">
-    <div class="hero-bg">
-      <div class="hero-gradient"></div>
-      <div class="hero-grid"></div>
+  <!-- ============================================================
+       LANDING / ABOUT SECTION
+       ============================================================ -->
+  <section id="about" class="landing">
+    <div class="landing-bg">
+      <div class="landing-gradient"></div>
+      <div class="landing-grid"></div>
     </div>
-    <div class="hero-container">
-      <div class="hero-content" data-animate="fade-up">
-        <div class="hero-badge">SVP, Data & AI · Get Well Network</div>
-        <h1 class="hero-title">
+
+    <div class="landing-container">
+      <!-- Left: Content -->
+      <div class="landing-content" data-animate="fade-up">
+        <div class="landing-badge">
+          <i class="fa-solid fa-hospital-user"></i>
+          SVP, Data &amp; AI &nbsp;·&nbsp; Get Well Network
+        </div>
+
+        <h1 class="landing-name">
           Oladimeji<br />
-          <span class="hero-title-accent">Farri</span>
+          <span class="landing-name-accent">Farri</span>
         </h1>
-        <p class="hero-credentials">MBBS &nbsp;·&nbsp; PhD &nbsp;·&nbsp; Health Informatics</p>
-        <p class="hero-tagline">
-          Physician. Scientist. Tech Executive.<br />
-          <span class="tagline-highlight">Turning AI into clinical and operational reality.</span>
+        <p class="landing-credentials">MBBS &nbsp;·&nbsp; PhD &nbsp;·&nbsp; Health Informatics</p>
+        <p class="landing-tagline">Physician. Scientist. Tech Executive.</p>
+
+        <p class="landing-bio">
+          15+ years building and scaling AI, informatics, and digital-health offerings across enterprise healthcare. I bridge clinical medicine and machine intelligence — turning AI ambition into measurable clinical and operational reality.
         </p>
-        <div class="hero-stats">
-          <div class="stat-item">
-            <span class="stat-number" data-count="15">0</span><span class="stat-plus">+</span>
-            <span class="stat-label">Years in Healthcare AI</span>
+
+        <ul class="landing-highlights">
+          <li>
+            <i class="fa-solid fa-book"></i>
+            Contributor, <em>Clinical NLP with Deep Learning</em> (Springer)
+          </li>
+          <li>
+            <i class="fa-solid fa-pen-nib"></i>
+            Co-author, <em>Healthcare in the Age of LLMs: Perspectives on Radiology</em> (Taylor &amp; Francis)
+          </li>
+          <li>
+            <i class="fa-solid fa-microphone-lines"></i>
+            Invited Speaker at Global AI &amp; Healthcare Conferences
+          </li>
+          <li>
+            <i class="fa-solid fa-magnifying-glass-chart"></i>
+            Reviewer: ACL, EMNLP, IJCAI, AMIA, Artificial Intelligence in Medicine
+          </li>
+        </ul>
+
+        <div class="landing-edu">
+          <div class="edu-pill">
+            <i class="fa-solid fa-graduation-cap"></i>
+            Ph.D. Health Informatics · University of Minnesota
           </div>
-          <div class="stat-divider"></div>
-          <div class="stat-item">
-            <span class="stat-number" data-count="70">0</span><span class="stat-plus">+</span>
-            <span class="stat-label">Peer-Reviewed Publications</span>
-          </div>
-          <div class="stat-divider"></div>
-          <div class="stat-item">
-            <span class="stat-number" data-count="20">0</span><span class="stat-plus">+</span>
-            <span class="stat-label">Issued U.S. Patents</span>
+          <div class="edu-pill">
+            <i class="fa-solid fa-stethoscope"></i>
+            MBBS · University of Ibadan
           </div>
         </div>
-        <div class="hero-actions">
-          <a href="#experience" class="btn btn-primary">View Experience</a>
-          <a href="#contact" class="btn btn-outline">Get in Touch</a>
+
+        <div class="landing-actions">
+          <a href="#experience" class="btn btn-primary">
+            <i class="fa-solid fa-timeline"></i> View Experience
+          </a>
+          <a href="#contact" class="btn btn-outline">
+            <i class="fa-solid fa-envelope"></i> Get in Touch
+          </a>
         </div>
       </div>
-      <div class="hero-photo-wrap" data-animate="fade-left">
-        <div class="hero-photo-ring"></div>
-        <div class="hero-photo-container">
-          <img src="assets/DIMEJI_47-FINAL_V2.png" alt="Oladimeji Farri" class="hero-photo" />
-        </div>
-        <div class="hero-photo-badge">
-          <span class="badge-icon">🏥</span>
-          <span>Healthcare AI Leader</span>
+
+      <!-- Right: Photo -->
+      <div class="landing-photo-wrap" data-animate="fade-left">
+        <div class="landing-photo-ring"></div>
+        <div class="landing-photo-frame">
+          <img src="assets/DIMEJI_47-FINAL_V2.png" alt="Oladimeji Farri" class="landing-photo" />
         </div>
       </div>
     </div>
-    <a href="#about" class="scroll-indicator" aria-label="Scroll down">
-      <div class="scroll-mouse">
-        <div class="scroll-wheel"></div>
+
+    <!-- Stats bar -->
+    <div class="landing-stats" data-animate="fade-up">
+      <div class="lstat-item">
+        <span class="lstat-number" data-count="15">0</span><span class="lstat-plus">+</span>
+        <span class="lstat-label">Years in Healthcare AI</span>
       </div>
+      <div class="lstat-divider"></div>
+      <div class="lstat-item">
+        <span class="lstat-number" data-count="70">0</span><span class="lstat-plus">+</span>
+        <span class="lstat-label">Peer-Reviewed Publications</span>
+      </div>
+      <div class="lstat-divider"></div>
+      <div class="lstat-item">
+        <span class="lstat-number" data-count="20">0</span><span class="lstat-plus">+</span>
+        <span class="lstat-label">Issued U.S. Patents</span>
+      </div>
+      <div class="lstat-divider"></div>
+      <div class="lstat-item">
+        <span class="lstat-number" data-count="120">0</span><span class="lstat-plus">+</span>
+        <span class="lstat-label">Invention Disclosures</span>
+      </div>
+    </div>
+
+    <a href="#experience" class="scroll-indicator" aria-label="Scroll down">
+      <div class="scroll-mouse"><div class="scroll-wheel"></div></div>
     </a>
   </section>
 
-  <!-- About Section -->
-  <section id="about" class="about">
-    <div class="container">
-      <div class="about-grid">
-        <div class="about-photo-wrap" data-animate="fade-right">
-          <div class="about-photo-bg"></div>
-          <img src="assets/DIMEJI_17-FINAL_V2.jpg" alt="Oladimeji Farri" class="about-photo" />
-          <div class="about-photo-tag">
-            <div class="tag-line">
-              <span class="tag-icon">📍</span>
-              Upper Saddle River, NJ
-            </div>
-            <div class="tag-line">
-              <span class="tag-icon">🎓</span>
-              Ph.D. · University of Minnesota
-            </div>
-            <div class="tag-line">
-              <span class="tag-icon">🏥</span>
-              MBBS · University of Ibadan
-            </div>
-          </div>
-        </div>
-        <div class="about-content" data-animate="fade-left">
-          <div class="section-label">About Me</div>
-          <h2 class="section-title">Where Medicine Meets<br /><span class="accent">Machine Intelligence</span></h2>
-          <p class="about-text">
-            I am a physician, scientist, and technology executive with over 15 years of experience building and scaling AI, informatics, and digital-health offerings across enterprise healthcare. My career bridges the worlds of clinical medicine and cutting-edge AI — giving me a rare perspective on what truly matters at the intersection of data and patient care.
-          </p>
-          <p class="about-text">
-            I have held R&D and product leadership roles at <strong>Get Well Network</strong>, <strong>Siemens Healthineers</strong>, and <strong>Philips Research</strong>, where I have owned multi-year AI roadmaps, driven competitive displacements, and built globally distributed teams across the U.S., India, Germany, and Romania.
-          </p>
-          <p class="about-text">
-            My work spans predictive diagnostics, NLP for clinical decision support, interoperability, EHR-derived data platforms, and AI governance frameworks — always with a <em>commercialization mindset</em> focused on winning the last mile of adoption.
-          </p>
-          <div class="about-highlights">
-            <div class="highlight-item">
-              <span class="highlight-icon">📚</span>
-              <span>Contributor, "Clinical NLP with Deep Learning" (Springer)</span>
-            </div>
-            <div class="highlight-item">
-              <span class="highlight-icon">✍️</span>
-              <span>Co-author, "Healthcare in the Age of LLMs: Perspectives on Radiology" (Taylor & Francis)</span>
-            </div>
-            <div class="highlight-item">
-              <span class="highlight-icon">🎤</span>
-              <span>Invited Speaker at Global AI & Healthcare Conferences</span>
-            </div>
-            <div class="highlight-item">
-              <span class="highlight-icon">🔬</span>
-              <span>Reviewer: ACL, EMNLP, IJCAI, AMIA, Artificial Intelligence in Medicine</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Experience Section -->
+  <!-- ============================================================
+       EXPERIENCE — INTERACTIVE TIMELINE
+       ============================================================ -->
   <section id="experience" class="experience">
     <div class="container">
       <div class="section-header" data-animate="fade-up">
         <div class="section-label">Career Journey</div>
         <h2 class="section-title">Professional <span class="accent">Experience</span></h2>
-        <p class="section-subtitle">A track record of leading AI innovation at the frontier of enterprise healthcare</p>
+        <p class="section-subtitle">Click any role to explore details and measurable impact</p>
       </div>
 
       <div class="timeline">
 
+        <!-- Get Well Network -->
         <div class="timeline-item" data-animate="fade-up">
-          <div class="timeline-marker">
-            <div class="marker-dot"></div>
-            <div class="marker-line"></div>
-          </div>
-          <div class="timeline-card current">
-            <div class="card-header">
-              <div class="card-meta">
-                <span class="card-badge current-badge">Current</span>
-                <span class="card-date">February 2025 – Present</span>
-              </div>
-              <div class="card-company">Get Well Network</div>
-              <div class="card-location">Bethesda, MD</div>
-              <h3 class="card-title">SVP, Data & AI</h3>
-            </div>
-            <ul class="card-bullets">
-              <li>Own enterprise AI and analytics strategy across a multi-solution patient-engagement platform (InPatient TV, Camera-based engagement, Post-discharge support) deployed at <strong>150+ health systems</strong>.</li>
-              <li>Defined a multi-year AI roadmap spanning Nurse Rounding AI assistant, AI-driven personalized care plans, ROI analytics, and business-productivity solutions.</li>
-              <li>Established NIST-based Responsible AI & Risk Management Framework with full model-lifecycle controls for regulated healthcare use.</li>
-              <li>Built and lead a <strong>global AI team</strong> across the U.S. and India in collaboration with engineering, product, and commercial leaders.</li>
-              <li>Partner with sales, marketing, and customer-success on positioning, value messaging, and last-mile adoption.</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="timeline-item" data-animate="fade-up">
-          <div class="timeline-marker">
-            <div class="marker-dot"></div>
-            <div class="marker-line"></div>
+          <div class="timeline-node">
+            <div class="node-dot active"></div>
+            <div class="node-line"></div>
           </div>
           <div class="timeline-card">
-            <div class="card-header">
-              <div class="card-meta">
-                <span class="card-date">October 2018 – February 2025</span>
+            <button class="timeline-header open" onclick="toggleTimeline(this)" aria-expanded="true">
+              <div class="th-left">
+                <div class="th-meta">
+                  <span class="th-badge current-badge">Current</span>
+                  <span class="th-date">February 2025 – Present</span>
+                </div>
+                <div class="th-company">Get Well Network</div>
+                <div class="th-location">
+                  <i class="fa-solid fa-location-dot"></i> Bethesda, MD
+                </div>
+                <div class="th-title">SVP, Data &amp; AI</div>
               </div>
-              <div class="card-company">Siemens Healthineers</div>
-              <div class="card-location">Princeton, NJ</div>
-              <h3 class="card-title">Senior Director R&D | Head of NLP Research Group</h3>
+              <div class="th-toggle">
+                <i class="fa-solid fa-chevron-down"></i>
+              </div>
+            </button>
+            <div class="timeline-details open">
+              <ul class="detail-bullets">
+                <li>Own enterprise AI and analytics strategy across a multi-solution patient-engagement platform — InPatient TV, Camera-based engagement, and Post-discharge support — deployed at 150+ health systems.</li>
+                <li>Defined and drive a multi-year AI roadmap spanning a Nurse Rounding AI assistant, AI-driven personalized care plans, ROI analytics, and business-productivity solutions, balancing platform scale with segment-specific needs.</li>
+                <li>Established NIST-based Responsible AI &amp; Risk Management Framework with full model-lifecycle controls for regulated healthcare use.</li>
+                <li>Built and lead a global AI team across the U.S. and India in collaboration with engineering, product, and commercial leaders.</li>
+                <li>Partner with sales, marketing, and customer-success on positioning, value messaging, and last-mile adoption.</li>
+              </ul>
+              <div class="impact-row">
+                <div class="impact-chip">
+                  <i class="fa-solid fa-hospital"></i>
+                  <span class="ic-num">150+</span>
+                  <span class="ic-lbl">Health Systems</span>
+                </div>
+                <div class="impact-chip">
+                  <i class="fa-solid fa-robot"></i>
+                  <span class="ic-num">4</span>
+                  <span class="ic-lbl">AI Roadmap Domains</span>
+                </div>
+                <div class="impact-chip">
+                  <i class="fa-solid fa-shield-halved"></i>
+                  <span class="ic-num">NIST</span>
+                  <span class="ic-lbl">AI Governance Framework</span>
+                </div>
+              </div>
             </div>
-            <ul class="card-bullets">
-              <li>Owned applied AI/NLP portfolio spanning Diagnostics, Imaging, and Customer Service — setting multi-year roadmaps and translating competitive insights into fundable opportunities.</li>
-              <li><strong>Diagnostics / Core Lab:</strong> Delivered anomaly-detection models flagging unplanned service events ~48 hours in advance, improving lab uptime with <strong>54% recall improvement</strong> over baseline.</li>
-              <li><strong>Customer Service:</strong> Built RSC Assistant (NLP decision-support) that displaced aquant.io, piloted at ≥5% higher accuracy, and launched as a cloud app delivering <strong>&gt;$1.2M in annual savings</strong>.</li>
-              <li><strong>Imaging:</strong> Shipped NLP for Medicalis, cutting physician data-entry burden and displacing Linguamatics; piloted in the cloud at UCSF.</li>
-              <li>Directed AI lifecycle management (instruction-tuning/LoRA, scalable serving, monitoring) and led globally distributed teams across U.S., India, Germany, and Romania.</li>
-            </ul>
           </div>
         </div>
 
+        <!-- Siemens Healthineers -->
         <div class="timeline-item" data-animate="fade-up">
-          <div class="timeline-marker">
-            <div class="marker-dot"></div>
-            <div class="marker-line"></div>
+          <div class="timeline-node">
+            <div class="node-dot"></div>
+            <div class="node-line"></div>
           </div>
           <div class="timeline-card">
-            <div class="card-header">
-              <div class="card-meta">
-                <span class="card-date">April 2017 – September 2018</span>
+            <button class="timeline-header" onclick="toggleTimeline(this)" aria-expanded="false">
+              <div class="th-left">
+                <div class="th-meta">
+                  <span class="th-date">October 2018 – February 2025</span>
+                </div>
+                <div class="th-company">Siemens Healthineers</div>
+                <div class="th-location">
+                  <i class="fa-solid fa-location-dot"></i> Princeton, NJ
+                </div>
+                <div class="th-title">Senior Director R&amp;D | Head of NLP Research Group</div>
               </div>
-              <div class="card-company">Philips Research North America</div>
-              <div class="card-location">Cambridge, MA</div>
-              <h3 class="card-title">Principal Scientist & Lead, AI Lab</h3>
+              <div class="th-toggle">
+                <i class="fa-solid fa-chevron-down"></i>
+              </div>
+            </button>
+            <div class="timeline-details">
+              <ul class="detail-bullets">
+                <li>Owned applied AI/NLP portfolio spanning Diagnostics, Imaging, and Customer Service — setting multi-year roadmaps and translating competitive insights into prioritized, fundable opportunities.</li>
+                <li><strong>Diagnostics / Core Lab:</strong> Delivered anomaly-detection models for Atellica analyzers that flag unplanned service events ~48 hours in advance, improving lab uptime and lowering service cost.</li>
+                <li><strong>Customer Service:</strong> Built RSC Assistant (NLP decision-support) that displaced aquant.io, piloted with 30+ experts at ≥5% higher service-value accuracy, and launched as a cloud application in North America.</li>
+                <li><strong>Imaging:</strong> Shipped NLP solution for Medicalis cutting physician data-entry burden, adopted over Linguamatics, and piloted in the cloud at UCSF.</li>
+                <li>Pursued value into adjacent markets: LLM scientific-literature application for Varian Medical Affairs, oncology registry enrichment (auto-populated TNM staging), and EHR + Imaging integration.</li>
+                <li>Directed AI lifecycle management (instruction-tuning/LoRA, scalable serving, monitoring) across globally distributed teams in the U.S., India, Germany, and Romania.</li>
+              </ul>
+              <div class="impact-row">
+                <div class="impact-chip highlight">
+                  <i class="fa-solid fa-circle-dollar-to-slot"></i>
+                  <span class="ic-num">$1.2M+</span>
+                  <span class="ic-lbl">Annual Savings (RSC Assistant)</span>
+                </div>
+                <div class="impact-chip highlight">
+                  <i class="fa-solid fa-arrow-trend-up"></i>
+                  <span class="ic-num">54%</span>
+                  <span class="ic-lbl">Recall Improvement (Atellica)</span>
+                </div>
+                <div class="impact-chip">
+                  <i class="fa-solid fa-trophy"></i>
+                  <span class="ic-num">2×</span>
+                  <span class="ic-lbl">Competitor Displacements</span>
+                </div>
+              </div>
             </div>
-            <ul class="card-bullets">
-              <li>Led AI-lab strategy for enterprise analytics and market expansion of TASY EMR and Integrated Radiology Solutions.</li>
-              <li>Built multimodal AI systems for real-world clinical decision support and workflow automation.</li>
-              <li>Fostered deep collaborations with MIT CSAIL, Stanford University, and international academic partners to accelerate AI innovations.</li>
-              <li>Managed multi-million research budgets; filed IP and drove thought leadership around NLP + ontology-driven approaches.</li>
-            </ul>
           </div>
         </div>
 
+        <!-- Philips — Principal Scientist -->
         <div class="timeline-item" data-animate="fade-up">
-          <div class="timeline-marker">
-            <div class="marker-dot"></div>
-            <div class="marker-line"></div>
+          <div class="timeline-node">
+            <div class="node-dot"></div>
+            <div class="node-line"></div>
           </div>
           <div class="timeline-card">
-            <div class="card-header">
-              <div class="card-meta">
-                <span class="card-date">July 2012 – March 2017</span>
+            <button class="timeline-header" onclick="toggleTimeline(this)" aria-expanded="false">
+              <div class="th-left">
+                <div class="th-meta">
+                  <span class="th-date">April 2017 – September 2018</span>
+                </div>
+                <div class="th-company">Philips Research North America</div>
+                <div class="th-location">
+                  <i class="fa-solid fa-location-dot"></i> Cambridge, MA
+                </div>
+                <div class="th-title">Principal Scientist &amp; Lead, AI Lab</div>
               </div>
-              <div class="card-company">Philips Research North America</div>
-              <div class="card-location">Cambridge, MA</div>
-              <h3 class="card-title">Senior Scientist</h3>
+              <div class="th-toggle">
+                <i class="fa-solid fa-chevron-down"></i>
+              </div>
+            </button>
+            <div class="timeline-details">
+              <ul class="detail-bullets">
+                <li>Led AI-lab strategy for enterprise analytics and market expansion of TASY EMR and Integrated Radiology Solutions, aligning innovation to commercial growth.</li>
+                <li>Built multimodal AI systems for real-world clinical decision support and workflow automation.</li>
+                <li>Fostered deep technical collaborations with premier academic institutions (MIT CSAIL, Stanford University, Pontifical Catholic University of Parana, Brazil) and industrial consortia to accelerate AI innovations.</li>
+                <li>Managed multi-million research budgets and multi-sector initiatives; filed IP and drove thought leadership around NLP + ontology-driven approaches.</li>
+              </ul>
+              <div class="impact-row">
+                <div class="impact-chip">
+                  <i class="fa-solid fa-flask"></i>
+                  <span class="ic-num">Multi-M</span>
+                  <span class="ic-lbl">Research Budget Managed</span>
+                </div>
+                <div class="impact-chip">
+                  <i class="fa-solid fa-building-columns"></i>
+                  <span class="ic-num">3</span>
+                  <span class="ic-lbl">Elite Academic Partnerships</span>
+                </div>
+              </div>
             </div>
-            <ul class="card-bullets">
-              <li>Developed scalable NLP platforms adopted in enterprise healthcare products across global markets, supporting clinical documentation, summarization, and decision support.</li>
-              <li>Guided teams through the transition from classical statistical models to modern deep learning for text summarization and clinical documentation.</li>
-              <li>Provided peer mentorship and fostered a culture of rigorous scientific inquiry and high-quality publication output.</li>
-            </ul>
           </div>
         </div>
 
+        <!-- Philips — Senior Scientist -->
         <div class="timeline-item" data-animate="fade-up">
-          <div class="timeline-marker">
-            <div class="marker-dot"></div>
+          <div class="timeline-node">
+            <div class="node-dot"></div>
+            <div class="node-line"></div>
           </div>
           <div class="timeline-card">
-            <div class="card-header">
-              <div class="card-meta">
-                <span class="card-date">2009 – 2012</span>
+            <button class="timeline-header" onclick="toggleTimeline(this)" aria-expanded="false">
+              <div class="th-left">
+                <div class="th-meta">
+                  <span class="th-date">July 2012 – March 2017</span>
+                </div>
+                <div class="th-company">Philips Research North America</div>
+                <div class="th-location">
+                  <i class="fa-solid fa-location-dot"></i> Cambridge, MA
+                </div>
+                <div class="th-title">Senior Scientist</div>
               </div>
-              <div class="card-company">Institute for Health Informatics, University of Minnesota</div>
-              <div class="card-location">Minneapolis, MN</div>
-              <h3 class="card-title">Research Assistant | Graduate Fellow</h3>
+              <div class="th-toggle">
+                <i class="fa-solid fa-chevron-down"></i>
+              </div>
+            </button>
+            <div class="timeline-details">
+              <ul class="detail-bullets">
+                <li>Developed scalable NLP platforms adopted in enterprise healthcare products across global markets, supporting clinical documentation, summarization, and decision support under regulated requirements.</li>
+                <li>Guided internal research teams through the transition from classical statistical models to modern deep learning methodologies for text summarization and clinical documentation.</li>
+                <li>Provided peer mentorship to junior researchers, fostering a culture of rigorous scientific inquiry and high-quality publication output.</li>
+              </ul>
+              <div class="impact-row">
+                <div class="impact-chip">
+                  <i class="fa-solid fa-earth-americas"></i>
+                  <span class="ic-num">Global</span>
+                  <span class="ic-lbl">NLP Platforms Deployed</span>
+                </div>
+                <div class="impact-chip">
+                  <i class="fa-solid fa-code-branch"></i>
+                  <span class="ic-num">DL</span>
+                  <span class="ic-lbl">Classical → Deep Learning Transition</span>
+                </div>
+              </div>
             </div>
-            <ul class="card-bullets">
-              <li>Investigated fundamental methodologies for EMR data synthesis, clinical workflow optimization, and algorithmic decision support.</li>
-              <li>Developed early-stage predictive and linguistic models aimed at improving documentation efficiency and clinical data utility.</li>
-            </ul>
           </div>
         </div>
 
-      </div>
+        <!-- University of Minnesota -->
+        <div class="timeline-item" data-animate="fade-up">
+          <div class="timeline-node">
+            <div class="node-dot"></div>
+          </div>
+          <div class="timeline-card">
+            <button class="timeline-header" onclick="toggleTimeline(this)" aria-expanded="false">
+              <div class="th-left">
+                <div class="th-meta">
+                  <span class="th-date">2009 – 2012</span>
+                </div>
+                <div class="th-company">Institute for Health Informatics, University of Minnesota</div>
+                <div class="th-location">
+                  <i class="fa-solid fa-location-dot"></i> Minneapolis, MN
+                </div>
+                <div class="th-title">Research Assistant | Graduate Fellow</div>
+              </div>
+              <div class="th-toggle">
+                <i class="fa-solid fa-chevron-down"></i>
+              </div>
+            </button>
+            <div class="timeline-details">
+              <ul class="detail-bullets">
+                <li>Investigated fundamental methodologies for EMR data synthesis, clinical workflow optimization, and algorithmic decision support.</li>
+                <li>Developed early-stage predictive and linguistic models aimed at improving documentation efficiency and clinical data utility.</li>
+              </ul>
+              <div class="impact-row">
+                <div class="impact-chip">
+                  <i class="fa-solid fa-graduation-cap"></i>
+                  <span class="ic-num">Ph.D.</span>
+                  <span class="ic-lbl">Health Informatics, 2012</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /timeline -->
     </div>
   </section>
 
-  <!-- Expertise Section -->
+  <!-- ============================================================
+       EXPERTISE
+       ============================================================ -->
   <section id="expertise" class="expertise">
     <div class="container">
       <div class="section-header" data-animate="fade-up">
@@ -287,108 +398,72 @@
         <p class="section-subtitle">Deep domain knowledge spanning strategy, research, and execution</p>
       </div>
       <div class="expertise-grid">
+
         <div class="expertise-card" data-animate="fade-up">
-          <div class="expertise-icon">🗺️</div>
+          <div class="expertise-icon"><i class="fa-solid fa-compass-drafting"></i></div>
           <h3>Global Portfolio Strategy</h3>
-          <p>Multi-year technology roadmaps, lifecycle ownership, and P&L mindset across diagnostics, core lab, and healthcare informatics portfolios.</p>
+          <p>Multi-year technology roadmaps, lifecycle ownership, and P&amp;L mindset across diagnostics, core lab, and healthcare informatics portfolios.</p>
         </div>
+
         <div class="expertise-card" data-animate="fade-up">
-          <div class="expertise-icon">🤖</div>
-          <h3>AI / Advanced Analytics & NLP</h3>
+          <div class="expertise-icon"><i class="fa-solid fa-robot"></i></div>
+          <h3>AI / Advanced Analytics &amp; NLP</h3>
           <p>End-to-end AI development: instruction-tuning, LoRA fine-tuning, LLM applications, NLP pipelines, predictive models, and production-grade serving and monitoring.</p>
         </div>
+
         <div class="expertise-card" data-animate="fade-up">
-          <div class="expertise-icon">🏥</div>
-          <h3>Diagnostics & Core Lab</h3>
+          <div class="expertise-icon"><i class="fa-solid fa-vial-circle-check"></i></div>
+          <h3>Diagnostics &amp; Core Lab</h3>
           <p>Deep fluency with Atellica and core lab instrument data, anomaly detection, predictive service models, and healthcare interoperability.</p>
         </div>
+
         <div class="expertise-card" data-animate="fade-up">
-          <div class="expertise-icon">🔗</div>
-          <h3>Interoperability & EHR Data</h3>
+          <div class="expertise-icon"><i class="fa-solid fa-arrows-left-right-to-line"></i></div>
+          <h3>Interoperability &amp; EHR Data</h3>
           <p>EHR-derived data platforms, HL7 FHIR, clinical documentation systems, and multi-modal clinical data integration across enterprise environments.</p>
         </div>
+
         <div class="expertise-card" data-animate="fade-up">
-          <div class="expertise-icon">🛡️</div>
-          <h3>AI Governance & Ethics</h3>
+          <div class="expertise-icon"><i class="fa-solid fa-shield-halved"></i></div>
+          <h3>AI Governance &amp; Ethics</h3>
           <p>NIST-based Responsible AI frameworks, model-lifecycle controls, risk management for regulated healthcare AI, and clinical AI safety evaluation.</p>
         </div>
+
         <div class="expertise-card" data-animate="fade-up">
-          <div class="expertise-icon">🌍</div>
+          <div class="expertise-icon"><i class="fa-solid fa-earth-americas"></i></div>
           <h3>Global Team Leadership</h3>
           <p>Building and leading matrixed, cross-functional teams across U.S., India, Germany, and Romania; mentoring researchers and driving high-output scientific cultures.</p>
         </div>
+
         <div class="expertise-card" data-animate="fade-up">
-          <div class="expertise-icon">💼</div>
-          <h3>Commercialization & GTM</h3>
+          <div class="expertise-icon"><i class="fa-solid fa-briefcase"></i></div>
+          <h3>Commercialization &amp; GTM</h3>
           <p>Translating research into market-ready products; partnering with sales, marketing, regulatory, legal, and manufacturing to win the last mile of adoption.</p>
         </div>
+
         <div class="expertise-card" data-animate="fade-up">
-          <div class="expertise-icon">🧠</div>
+          <div class="expertise-icon"><i class="fa-solid fa-microchip"></i></div>
           <h3>Platform Architecture</h3>
           <p>Cloud-native AI platform design, scalable data infrastructure, multi-solution analytics architectures, and adjacent market expansion.</p>
         </div>
+
       </div>
     </div>
   </section>
 
-  <!-- Impact / Portfolio Highlights Section -->
-  <section id="impact" class="impact">
-    <div class="impact-bg"></div>
-    <div class="container">
-      <div class="section-header" data-animate="fade-up">
-        <div class="section-label light">Portfolio Highlights</div>
-        <h2 class="section-title light">Measurable <span class="accent-light">Impact</span></h2>
-        <p class="section-subtitle light">Turning AI ambition into tangible clinical and commercial outcomes</p>
-      </div>
-      <div class="impact-grid">
-        <div class="impact-card" data-animate="fade-up">
-          <div class="impact-number">$1.2M+</div>
-          <div class="impact-title">Annual Savings</div>
-          <p>NLP service-AI solution (RSC Assistant) at Siemens Healthineers delivering measurable cost reduction by displacing an external competitor.</p>
-        </div>
-        <div class="impact-card" data-animate="fade-up">
-          <div class="impact-number">54%</div>
-          <div class="impact-title">Recall Improvement</div>
-          <p>Predictive AI for Atellica Core Lab analyzers, flagging unplanned service events ~48 hours in advance over a previous baseline model.</p>
-        </div>
-        <div class="impact-card" data-animate="fade-up">
-          <div class="impact-number">150+</div>
-          <div class="impact-title">Health Systems</div>
-          <p>Enterprise AI and analytics strategy serving 150+ health systems via Get Well Network's multi-solution patient-engagement platform.</p>
-        </div>
-        <div class="impact-card" data-animate="fade-up">
-          <div class="impact-number">2×</div>
-          <div class="impact-title">Competitive Displacements</div>
-          <p>Won internal adoption over aquant.io and Linguamatics with benchmark-exceeding AI solutions delivering superior accuracy and scale.</p>
-        </div>
-      </div>
-      <div class="impact-domains" data-animate="fade-up">
-        <div class="domain-label">Solution Domains</div>
-        <div class="domain-tags">
-          <span class="domain-tag">Nurse Rounding AI</span>
-          <span class="domain-tag">Personalized Care Plans</span>
-          <span class="domain-tag">ROI Analytics</span>
-          <span class="domain-tag">NLP Decision Support</span>
-          <span class="domain-tag">Predictive Diagnostics</span>
-          <span class="domain-tag">Radiology NLP</span>
-          <span class="domain-tag">Oncology Registry Enrichment</span>
-          <span class="domain-tag">LLM Literature Intelligence</span>
-          <span class="domain-tag">Post-Discharge AI</span>
-          <span class="domain-tag">EHR + Imaging Integration</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Scientific Leadership Section -->
+  <!-- ============================================================
+       SCIENTIFIC LEADERSHIP
+       ============================================================ -->
   <section id="science" class="science">
     <div class="container">
       <div class="section-header" data-animate="fade-up">
-        <div class="section-label">Research & Scholarship</div>
+        <div class="section-label">Research &amp; Scholarship</div>
         <h2 class="section-title">Scientific <span class="accent">Leadership</span></h2>
         <p class="section-subtitle">Contributing to the global body of knowledge in AI, healthcare informatics, and clinical NLP</p>
       </div>
+
       <div class="science-grid">
+
         <div class="science-stats" data-animate="fade-right">
           <div class="science-stat-card">
             <div class="science-stat-number">70<span>+</span></div>
@@ -403,26 +478,29 @@
             <div class="science-stat-label">Invention Disclosures</div>
           </div>
         </div>
+
         <div class="science-content" data-animate="fade-left">
+
           <div class="science-section">
-            <h3 class="science-heading">Books & Book Chapters</h3>
+            <h3 class="science-heading">Books &amp; Book Chapters</h3>
             <div class="publication-item">
-              <div class="pub-icon">📖</div>
+              <div class="pub-icon"><i class="fa-solid fa-book-open"></i></div>
               <div>
                 <p class="pub-title">Contributor — <em>"Clinical NLP with Deep Learning"</em></p>
                 <p class="pub-venue">Springer</p>
               </div>
             </div>
             <div class="publication-item">
-              <div class="pub-icon">📖</div>
+              <div class="pub-icon"><i class="fa-solid fa-book-open"></i></div>
               <div>
                 <p class="pub-title">Co-author — <em>"Healthcare in the Age of LLMs: Perspectives on Radiology"</em></p>
-                <p class="pub-venue">Taylor & Francis</p>
+                <p class="pub-venue">Taylor &amp; Francis</p>
               </div>
             </div>
           </div>
+
           <div class="science-section">
-            <h3 class="science-heading">Journal Reviewing</h3>
+            <h3 class="science-heading">Journal &amp; Conference Reviewing</h3>
             <div class="reviewer-list">
               <span class="reviewer-tag">ACL</span>
               <span class="reviewer-tag">EMNLP</span>
@@ -431,20 +509,22 @@
               <span class="reviewer-tag">Artificial Intelligence in Medicine</span>
             </div>
           </div>
+
           <div class="science-section">
             <h3 class="science-heading">Full Publication List</h3>
             <div class="scholar-links">
               <a href="https://scholar.google.com/scholar?q=Oladimeji+Farri" target="_blank" rel="noopener" class="scholar-link">
-                <span class="scholar-icon">🔗</span> Google Scholar
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Google Scholar
               </a>
               <a href="https://www.semanticscholar.org/author/Oladimeji-Farri" target="_blank" rel="noopener" class="scholar-link">
-                <span class="scholar-icon">🔗</span> Semantic Scholar
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Semantic Scholar
               </a>
               <a href="https://dblp.org/search?q=Oladimeji+Farri" target="_blank" rel="noopener" class="scholar-link">
-                <span class="scholar-icon">🔗</span> DBLP
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> DBLP
               </a>
             </div>
           </div>
+
           <div class="science-section">
             <h3 class="science-heading">Education</h3>
             <div class="edu-item">
@@ -462,12 +542,15 @@
               </div>
             </div>
           </div>
+
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Contact Section -->
+  <!-- ============================================================
+       CONTACT
+       ============================================================ -->
   <section id="contact" class="contact">
     <div class="container">
       <div class="contact-card" data-animate="fade-up">
@@ -479,28 +562,21 @@
           </p>
           <div class="contact-items">
             <a href="mailto:vibessh@gmail.com" class="contact-item">
-              <div class="contact-item-icon">✉️</div>
+              <div class="contact-item-icon"><i class="fa-solid fa-envelope"></i></div>
               <div>
                 <div class="contact-item-label">Email</div>
                 <div class="contact-item-value">vibessh@gmail.com</div>
               </div>
             </a>
             <a href="tel:6122351903" class="contact-item">
-              <div class="contact-item-icon">📞</div>
+              <div class="contact-item-icon"><i class="fa-solid fa-phone"></i></div>
               <div>
                 <div class="contact-item-label">Phone</div>
                 <div class="contact-item-value">612.235.1903</div>
               </div>
             </a>
-            <div class="contact-item">
-              <div class="contact-item-icon">📍</div>
-              <div>
-                <div class="contact-item-label">Location</div>
-                <div class="contact-item-value">Upper Saddle River, NJ</div>
-              </div>
-            </div>
             <a href="https://www.linkedin.com/in/oladimeji-farri" target="_blank" rel="noopener" class="contact-item">
-              <div class="contact-item-icon">💼</div>
+              <div class="contact-item-icon"><i class="fa-brands fa-linkedin"></i></div>
               <div>
                 <div class="contact-item-label">LinkedIn</div>
                 <div class="contact-item-value">Connect on LinkedIn</div>
@@ -509,7 +585,7 @@
           </div>
         </div>
         <div class="contact-photo-wrap">
-          <img src="assets/DIMEJI_47-FINAL_V2.png" alt="Oladimeji Farri" class="contact-photo" />
+          <img src="assets/DIMEJI_17-FINAL_V2.jpg" alt="Oladimeji Farri" class="contact-photo" />
         </div>
       </div>
     </div>
@@ -527,7 +603,6 @@
           <a href="#about">About</a>
           <a href="#experience">Experience</a>
           <a href="#expertise">Expertise</a>
-          <a href="#impact">Impact</a>
           <a href="#science">Research</a>
           <a href="#contact">Contact</a>
         </div>
