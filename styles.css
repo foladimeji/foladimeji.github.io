@@ -5,15 +5,18 @@
 
 /* ---------- CSS Custom Properties ---------- */
 :root {
-  --navy:        #0a1628;
-  --navy-mid:    #0d2040;
-  --navy-light:  #122654;
+  --navy:        #080f1e;
+  --navy-mid:    #0a1830;
+  --navy-light:  #0f2244;
   --gold:        #c9a84c;
   --gold-light:  #e8c96c;
   --gold-pale:   #f5e6b8;
+  --cyan:        #38bdf8;
+  --cyan-dim:    rgba(56,189,248,0.12);
+  --cyan-glow:   rgba(56,189,248,0.25);
   --white:       #ffffff;
-  --off-white:   #f8f9fc;
-  --text-primary:   #1a2642;
+  --off-white:   #f4f7fb;
+  --text-primary:   #111827;
   --text-secondary: #4a5568;
   --text-muted:     #718096;
   --border:      #e2e8f0;
@@ -27,7 +30,8 @@
   --radius-full: 9999px;
   --transition:  0.3s cubic-bezier(0.4,0,0.2,1);
   --font-body:   'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-  --font-display:'Playfair Display', Georgia, serif;
+  --font-display:'Syne', 'Inter', sans-serif;
+  --font-mono:   'Space Mono', 'Courier New', monospace;
 }
 
 /* ---------- Reset ---------- */
@@ -145,10 +149,46 @@ button { font-family: inherit; cursor: pointer; background: none; border: none; 
 }
 
 .nav-logo {
-  font-family: var(--font-display);
-  font-size: 1.75rem;
-  font-weight: 800;
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  font-weight: 700;
   color: var(--white);
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  letter-spacing: 0.02em;
+}
+
+.nav-logo-icon {
+  width: 34px;
+  height: 34px;
+  background: linear-gradient(135deg, var(--cyan-dim), rgba(201,168,76,0.15));
+  border: 1px solid rgba(56,189,248,0.35);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.nav-logo-icon i {
+  font-size: 0.95rem;
+  background: linear-gradient(135deg, var(--cyan), var(--gold-light));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.logo-text {
+  font-family: var(--font-mono);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--white);
+}
+
+.logo-bracket {
+  color: var(--cyan);
+  font-family: var(--font-mono);
 }
 
 .logo-dot { color: var(--gold); }
@@ -229,18 +269,39 @@ button { font-family: inherit; cursor: pointer; background: none; border: none; 
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse 70% 60% at 65% 35%, rgba(201,168,76,0.1) 0%, transparent 55%),
-    linear-gradient(135deg, #0a1628 0%, #0d2040 50%, #122654 100%);
+    radial-gradient(ellipse 55% 55% at 70% 30%, rgba(56,189,248,0.07) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 50% at 20% 70%, rgba(201,168,76,0.08) 0%, transparent 55%),
+    linear-gradient(145deg, #080f1e 0%, #0a1830 55%, #0f2244 100%);
 }
 
 .landing-grid {
   position: absolute;
   inset: 0;
   background-image:
-    linear-gradient(rgba(201,168,76,0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(201,168,76,0.04) 1px, transparent 1px);
-  background-size: 60px 60px;
-  mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 30%, transparent 80%);
+    radial-gradient(rgba(56,189,248,0.09) 1px, transparent 1px);
+  background-size: 36px 36px;
+  mask-image: radial-gradient(ellipse 85% 85% at 50% 50%, black 20%, transparent 78%);
+}
+
+/* subtle horizontal scan line that sweeps down the hero */
+.landing-bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    rgba(56,189,248,0.03) 50%,
+    transparent 100%
+  );
+  background-size: 100% 200%;
+  animation: scanline 8s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes scanline {
+  0%   { background-position: 0 -100%; }
+  100% { background-position: 0 200%; }
 }
 
 .landing-container {
@@ -277,12 +338,12 @@ button { font-family: inherit; cursor: pointer; background: none; border: none; 
 
 .landing-name {
   font-family: var(--font-display);
-  font-size: clamp(3.2rem, 6.5vw, 5.2rem);
+  font-size: clamp(3rem, 6.5vw, 5rem);
   font-weight: 800;
   color: var(--white);
   line-height: 1.0;
-  margin-bottom: 12px;
-  letter-spacing: -0.02em;
+  margin-bottom: 14px;
+  letter-spacing: -0.01em;
 }
 
 .landing-name-accent {
@@ -309,11 +370,15 @@ button { font-family: inherit; cursor: pointer; background: none; border: none; 
 }
 
 .landing-bio {
-  font-size: 1rem;
-  color: rgba(255,255,255,0.65);
-  line-height: 1.75;
-  margin-bottom: 28px;
-  max-width: 560px;
+  font-size: 1.02rem;
+  color: rgba(255,255,255,0.7);
+  line-height: 1.8;
+  margin-bottom: 20px;
+  max-width: 580px;
+}
+
+.landing-bio + .landing-bio {
+  margin-bottom: 32px;
 }
 
 .landing-highlights {
@@ -379,35 +444,59 @@ button { font-family: inherit; cursor: pointer; background: none; border: none; 
   align-items: center;
 }
 
+/* outer glow ring — pulses between cyan and gold */
 .landing-photo-ring {
   position: absolute;
-  width: 108%;
-  height: 108%;
-  border: 2px solid rgba(201,168,76,0.2);
-  border-radius: 50% 40% 60% 45% / 50% 55% 45% 50%;
-  animation: morphRing 9s ease-in-out infinite;
+  width: 112%;
+  height: 112%;
+  border-radius: 50%;
+  background: conic-gradient(
+    from 0deg,
+    var(--cyan) 0%,
+    var(--gold) 30%,
+    transparent 50%,
+    var(--gold) 70%,
+    var(--cyan) 100%
+  );
+  opacity: 0.18;
+  animation: spinRing 12s linear infinite;
+  filter: blur(2px);
 }
 
-@keyframes morphRing {
-  0%, 100% { border-radius: 50% 40% 60% 45% / 50% 55% 45% 50%; }
-  33%       { border-radius: 45% 55% 45% 55% / 55% 45% 55% 45%; }
-  66%       { border-radius: 55% 45% 55% 45% / 45% 55% 45% 55%; }
+@keyframes spinRing {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+/* second decorative ring */
+.landing-photo-wrap::before {
+  content: '';
+  position: absolute;
+  width: 105%;
+  height: 105%;
+  border-radius: 50%;
+  border: 1px dashed rgba(56,189,248,0.25);
+  animation: spinRingSlow 20s linear infinite reverse;
+}
+
+@keyframes spinRingSlow {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
 }
 
 .landing-photo-frame {
-  width: 400px;
-  height: 500px;
-  border-radius: 50% 40% 55% 40% / 45% 50% 50% 45%;
+  width: 380px;
+  height: 420px;
+  border-radius: 50%;
   overflow: hidden;
-  border: 3px solid rgba(201,168,76,0.4);
-  box-shadow: 0 0 0 8px rgba(201,168,76,0.08), 0 30px 80px rgba(0,0,0,0.5);
-  animation: morphPhoto 9s ease-in-out infinite;
-}
-
-@keyframes morphPhoto {
-  0%, 100% { border-radius: 50% 40% 55% 40% / 45% 50% 50% 45%; }
-  33%       { border-radius: 40% 55% 40% 55% / 55% 40% 55% 40%; }
-  66%       { border-radius: 55% 40% 55% 40% / 40% 55% 40% 55%; }
+  border: 2px solid transparent;
+  background:
+    linear-gradient(var(--navy-mid), var(--navy-mid)) padding-box,
+    linear-gradient(135deg, var(--cyan), var(--gold), var(--cyan)) border-box;
+  box-shadow:
+    0 0 0 6px rgba(56,189,248,0.06),
+    0 0 40px rgba(56,189,248,0.12),
+    0 30px 80px rgba(0,0,0,0.55);
 }
 
 .landing-photo {
@@ -415,6 +504,7 @@ button { font-family: inherit; cursor: pointer; background: none; border: none; 
   height: 100%;
   object-fit: cover;
   object-position: top center;
+  filter: contrast(1.05) brightness(1.02);
 }
 
 /* --- Stats bar --- */
@@ -1038,6 +1128,44 @@ button { font-family: inherit; cursor: pointer; background: none; border: none; 
   color: var(--text-secondary);
 }
 
+/* --- Awards & Honors --- */
+.award-item {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.award-item:last-child { border-bottom: none; }
+
+.award-year {
+  font-size: 0.75rem;
+  font-weight: 700;
+  font-family: var(--font-mono);
+  color: var(--cyan);
+  background: rgba(56,189,248,0.1);
+  border: 1px solid rgba(56,189,248,0.25);
+  padding: 3px 10px;
+  border-radius: var(--radius-full);
+  white-space: nowrap;
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+.award-title {
+  font-size: 0.93rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 3px;
+  line-height: 1.45;
+}
+
+.award-venue {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
+
 /* ============================================================
    CONTACT
    ============================================================ */
@@ -1147,12 +1275,13 @@ button { font-family: inherit; cursor: pointer; background: none; border: none; 
 }
 
 .footer-logo {
-  font-family: var(--font-display);
-  font-size: 1.7rem;
-  font-weight: 800;
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  font-weight: 700;
   color: var(--white);
   display: block;
   margin-bottom: 4px;
+  letter-spacing: 0.02em;
 }
 
 .footer-tagline {
@@ -1220,7 +1349,7 @@ button { font-family: inherit; cursor: pointer; background: none; border: none; 
   .landing-badge { margin: 0 auto 24px; }
 
   .landing-photo-wrap { order: -1; }
-  .landing-photo-frame { width: 280px; height: 360px; }
+  .landing-photo-frame { width: 280px; height: 280px; }
 
   .landing-stats { flex-wrap: wrap; gap: 8px; }
   .lstat-item { min-width: 120px; }
@@ -1267,7 +1396,7 @@ button { font-family: inherit; cursor: pointer; background: none; border: none; 
 }
 
 @media (max-width: 480px) {
-  .landing-photo-frame { width: 240px; height: 300px; }
+  .landing-photo-frame { width: 230px; height: 230px; }
   .contact-content { padding: 28px 22px; }
   .science-stats { flex-direction: column; }
 }
