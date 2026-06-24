@@ -5,21 +5,21 @@
 
 /* ---------- CSS Custom Properties ---------- */
 :root {
-  --navy:        #080f1e;
-  --navy-mid:    #0a1830;
-  --navy-light:  #0f2244;
+  --navy:        #03060d;
+  --navy-mid:    #060c18;
+  --navy-light:  #0b1428;
   --gold:        #c9a84c;
   --gold-light:  #e8c96c;
   --gold-pale:   #f5e6b8;
   --cyan:        #38bdf8;
   --cyan-dim:    rgba(56,189,248,0.12);
   --cyan-glow:   rgba(56,189,248,0.25);
-  --white:       #ffffff;
-  --off-white:   #f4f7fb;
-  --text-primary:   #111827;
-  --text-secondary: #4a5568;
-  --text-muted:     #718096;
-  --border:      #e2e8f0;
+  --white:       #0d1117;
+  --off-white:   #0f1520;
+  --text-primary:   #e8edf5;
+  --text-secondary: #9faec2;
+  --text-muted:     #637087;
+  --border:      rgba(255,255,255,0.08);
   --shadow-sm:   0 1px 3px rgba(0,0,0,0.08);
   --shadow-md:   0 4px 20px rgba(0,0,0,0.10);
   --shadow-lg:   0 10px 40px rgba(0,0,0,0.14);
@@ -29,15 +29,15 @@
   --radius-lg:   24px;
   --radius-full: 9999px;
   --transition:  0.3s cubic-bezier(0.4,0,0.2,1);
-  --font-body:   'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-  --font-display:'Syne', 'Inter', sans-serif;
+  --font-body:   'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-display:'Oxanium', 'Outfit', sans-serif;
   --font-mono:   'Space Mono', 'Courier New', monospace;
 }
 
 /* ---------- Reset ---------- */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html  { scroll-behavior: smooth; font-size: 16px; }
-body  { font-family: var(--font-body); color: var(--text-primary); background: var(--white); line-height: 1.6; overflow-x: hidden; }
+body  { font-family: var(--font-body); color: var(--text-primary); background: #03060d; line-height: 1.6; overflow-x: hidden; }
 img   { max-width: 100%; display: block; }
 a     { text-decoration: none; color: inherit; }
 ul    { list-style: none; }
@@ -133,10 +133,10 @@ button { font-family: inherit; cursor: pointer; background: none; border: none; 
 }
 
 .navbar.scrolled {
-  background: rgba(10,22,40,0.96);
-  backdrop-filter: blur(20px);
+  background: rgba(3,6,13,0.97);
+  backdrop-filter: blur(24px);
   padding: 12px 0;
-  box-shadow: 0 4px 30px rgba(0,0,0,0.25);
+  box-shadow: 0 4px 30px rgba(0,0,0,0.6);
 }
 
 .nav-container {
@@ -269,9 +269,9 @@ button { font-family: inherit; cursor: pointer; background: none; border: none; 
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse 55% 55% at 70% 30%, rgba(56,189,248,0.07) 0%, transparent 60%),
-    radial-gradient(ellipse 60% 50% at 20% 70%, rgba(201,168,76,0.08) 0%, transparent 55%),
-    linear-gradient(145deg, #080f1e 0%, #0a1830 55%, #0f2244 100%);
+    radial-gradient(ellipse 55% 55% at 70% 30%, rgba(56,189,248,0.06) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 50% at 20% 70%, rgba(201,168,76,0.06) 0%, transparent 55%),
+    linear-gradient(145deg, #03060d 0%, #060c18 55%, #0b1428 100%);
 }
 
 .landing-grid {
@@ -362,11 +362,22 @@ button { font-family: inherit; cursor: pointer; background: none; border: none; 
   margin-bottom: 10px;
 }
 
+.landing-degrees {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 400;
+  color: var(--cyan);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  opacity: 0.85;
+}
+
 .landing-tagline {
   font-size: 1.1rem;
   font-weight: 600;
   color: rgba(255,255,255,0.85);
-  margin-bottom: 20px;
+  margin-bottom: 22px;
 }
 
 .landing-bio {
@@ -605,6 +616,7 @@ button { font-family: inherit; cursor: pointer; background: none; border: none; 
 .experience {
   padding: 120px 0;
   background: var(--white);
+  border-top: 1px solid var(--border);
 }
 
 .timeline {
@@ -656,7 +668,7 @@ button { font-family: inherit; cursor: pointer; background: none; border: none; 
 
 /* --- Timeline card --- */
 .timeline-card {
-  background: var(--white);
+  background: var(--off-white);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   margin-bottom: 20px;
@@ -756,7 +768,7 @@ button { font-family: inherit; cursor: pointer; background: none; border: none; 
   flex-shrink: 0;
   margin-top: 4px;
   transition: all var(--transition);
-  background: var(--off-white);
+  background: rgba(255,255,255,0.05);
 }
 
 .th-toggle i {
@@ -874,6 +886,7 @@ button { font-family: inherit; cursor: pointer; background: none; border: none; 
 .expertise {
   padding: 120px 0;
   background: var(--off-white);
+  border-top: 1px solid var(--border);
 }
 
 .expertise-grid {
@@ -883,7 +896,7 @@ button { font-family: inherit; cursor: pointer; background: none; border: none; 
 }
 
 .expertise-card {
-  background: var(--white);
+  background: rgba(255,255,255,0.04);
   border: 1px solid var(--border);
   border-radius: var(--radius-md);
   padding: 28px 22px;
@@ -945,6 +958,7 @@ button { font-family: inherit; cursor: pointer; background: none; border: none; 
 .science {
   padding: 120px 0;
   background: var(--white);
+  border-top: 1px solid var(--border);
 }
 
 .science-grid {
@@ -1016,7 +1030,7 @@ button { font-family: inherit; cursor: pointer; background: none; border: none; 
   align-items: flex-start;
   gap: 14px;
   padding: 16px;
-  background: var(--off-white);
+  background: rgba(255,255,255,0.04);
   border-radius: var(--radius-sm);
   border: 1px solid var(--border);
   margin-bottom: 10px;
@@ -1060,9 +1074,9 @@ button { font-family: inherit; cursor: pointer; background: none; border: none; 
 .reviewer-tag {
   font-size: 0.8rem;
   font-weight: 600;
-  color: var(--navy);
-  background: rgba(10,22,40,0.06);
-  border: 1px solid rgba(10,22,40,0.1);
+  color: var(--text-primary);
+  background: rgba(255,255,255,0.06);
+  border: 1px solid var(--border);
   padding: 5px 13px;
   border-radius: var(--radius-full);
 }
@@ -1075,8 +1089,8 @@ button { font-family: inherit; cursor: pointer; background: none; border: none; 
   gap: 7px;
   font-size: 0.88rem;
   font-weight: 600;
-  color: var(--navy);
-  background: var(--off-white);
+  color: var(--text-primary);
+  background: rgba(255,255,255,0.05);
   border: 1px solid var(--border);
   padding: 10px 18px;
   border-radius: var(--radius-full);
@@ -1086,9 +1100,9 @@ button { font-family: inherit; cursor: pointer; background: none; border: none; 
 .scholar-link i { font-size: 0.78rem; }
 
 .scholar-link:hover {
-  background: var(--navy);
-  color: var(--gold-light);
-  border-color: var(--navy);
+  background: rgba(56,189,248,0.1);
+  color: var(--cyan);
+  border-color: rgba(56,189,248,0.3);
   transform: translateY(-2px);
   box-shadow: var(--shadow-md);
 }
@@ -1169,7 +1183,7 @@ button { font-family: inherit; cursor: pointer; background: none; border: none; 
 /* ============================================================
    CONTACT
    ============================================================ */
-.contact { padding: 120px 0; background: var(--off-white); }
+.contact { padding: 120px 0; background: var(--off-white); border-top: 1px solid var(--border); }
 
 .contact-card {
   background: var(--white);
@@ -1190,6 +1204,11 @@ button { font-family: inherit; cursor: pointer; background: none; border: none; 
   margin-bottom: 36px;
 }
 
+.contact-highlight {
+  color: var(--gold-light);
+  font-weight: 600;
+}
+
 .contact-items { display: flex; flex-direction: column; gap: 14px; }
 
 .contact-item {
@@ -1199,7 +1218,7 @@ button { font-family: inherit; cursor: pointer; background: none; border: none; 
   padding: 14px 18px;
   border: 1px solid var(--border);
   border-radius: var(--radius-md);
-  background: var(--off-white);
+  background: rgba(255,255,255,0.04);
   transition: all var(--transition);
 }
 
