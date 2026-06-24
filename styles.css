@@ -113,7 +113,7 @@ button { font-family: inherit; cursor: pointer; background: none; border: none; 
 
 .btn-outline {
   background: transparent;
-  color: var(--white);
+  color: rgba(255,255,255,0.9);
   border-color: rgba(255,255,255,0.4);
 }
 
@@ -152,7 +152,7 @@ button { font-family: inherit; cursor: pointer; background: none; border: none; 
   font-family: var(--font-mono);
   font-size: 1rem;
   font-weight: 700;
-  color: var(--white);
+  color: var(--text-primary);
   display: flex;
   align-items: center;
   gap: 9px;
@@ -183,7 +183,7 @@ button { font-family: inherit; cursor: pointer; background: none; border: none; 
   font-family: var(--font-mono);
   font-size: 1.05rem;
   font-weight: 700;
-  color: var(--white);
+  color: var(--text-primary);
 }
 
 .logo-bracket {
@@ -209,7 +209,7 @@ button { font-family: inherit; cursor: pointer; background: none; border: none; 
 }
 
 .nav-link:hover, .nav-link.active {
-  color: var(--white);
+  color: rgba(255,255,255,0.95);
   background: rgba(255,255,255,0.1);
 }
 
@@ -226,7 +226,7 @@ button { font-family: inherit; cursor: pointer; background: none; border: none; 
   transform: translateY(-1px);
   box-shadow: 0 6px 20px rgba(201,168,76,0.5);
   background: rgba(255,255,255,0.1) !important;
-  color: var(--white) !important;
+  color: rgba(255,255,255,0.9) !important;
 }
 
 .nav-toggle {
@@ -340,7 +340,7 @@ button { font-family: inherit; cursor: pointer; background: none; border: none; 
   font-family: var(--font-display);
   font-size: clamp(3rem, 6.5vw, 5rem);
   font-weight: 800;
-  color: var(--white);
+  color: #ffffff;
   line-height: 1.0;
   margin-bottom: 14px;
   letter-spacing: -0.01em;
@@ -557,7 +557,7 @@ button { font-family: inherit; cursor: pointer; background: none; border: none; 
   display: block;
   font-size: 0.7rem;
   font-weight: 600;
-  color: rgba(255,255,255,0.45);
+  color: rgba(255,255,255,0.62);
   text-transform: uppercase;
   letter-spacing: 0.07em;
   margin-top: 5px;
@@ -736,7 +736,7 @@ button { font-family: inherit; cursor: pointer; background: none; border: none; 
 .th-company {
   font-size: 1.05rem;
   font-weight: 700;
-  color: var(--navy);
+  color: var(--text-primary);
   margin-bottom: 2px;
 }
 
@@ -842,8 +842,8 @@ button { font-family: inherit; cursor: pointer; background: none; border: none; 
   align-items: center;
   gap: 8px;
   padding: 8px 16px;
-  background: rgba(10,22,40,0.04);
-  border: 1px solid rgba(10,22,40,0.1);
+  background: rgba(255,255,255,0.05);
+  border: 1px solid var(--border);
   border-radius: var(--radius-md);
   transition: all var(--transition);
 }
@@ -865,7 +865,7 @@ button { font-family: inherit; cursor: pointer; background: none; border: none; 
 .ic-num {
   font-size: 1rem;
   font-weight: 800;
-  color: var(--navy);
+  color: var(--text-primary);
   font-family: var(--font-display);
   line-height: 1;
 }
@@ -1061,7 +1061,7 @@ button { font-family: inherit; cursor: pointer; background: none; border: none; 
   margin-bottom: 3px;
 }
 
-.pub-title em { color: var(--navy); font-style: italic; }
+.pub-title em { color: var(--gold-light); font-style: italic; }
 
 .pub-venue {
   font-size: 0.8rem;
@@ -1297,7 +1297,7 @@ button { font-family: inherit; cursor: pointer; background: none; border: none; 
   font-family: var(--font-mono);
   font-size: 1rem;
   font-weight: 700;
-  color: var(--white);
+  color: var(--text-primary);
   display: block;
   margin-bottom: 4px;
   letter-spacing: 0.02em;
@@ -1305,7 +1305,7 @@ button { font-family: inherit; cursor: pointer; background: none; border: none; 
 
 .footer-tagline {
   font-size: 0.78rem;
-  color: rgba(255,255,255,0.4);
+  color: rgba(255,255,255,0.55);
   letter-spacing: 0.08em;
 }
 
@@ -1313,7 +1313,7 @@ button { font-family: inherit; cursor: pointer; background: none; border: none; 
 
 .footer-links a {
   font-size: 0.85rem;
-  color: rgba(255,255,255,0.5);
+  color: rgba(255,255,255,0.65);
   font-weight: 500;
   transition: color var(--transition);
 }
@@ -1324,7 +1324,7 @@ button { font-family: inherit; cursor: pointer; background: none; border: none; 
 
 .footer-copy p {
   font-size: 0.78rem;
-  color: rgba(255,255,255,0.3);
+  color: rgba(255,255,255,0.48);
   line-height: 1.8;
 }
 
